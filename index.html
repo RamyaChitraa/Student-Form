@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Form</title>
+  <!-- Linking CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>STUDENT FORM</h1>
+
+    <!-- Form -->
+    <div class="form-container">
+      <form id="studentForm">
+        <table border="1" cellpadding="5">
+          <tr>
+            <td><label for="name">Name</label></td>
+            <td><input type="text" id="name" required></td>
+          </tr>
+          <tr>
+            <td><label for="age">Age</label></td>
+            <td><input type="number" id="age" required></td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>
+              <input type="radio" name="gender" value="Male" required> Male
+              <input type="radio" name="gender" value="Female"> Female
+            </td>
+          </tr>
+          <tr>
+            <td><label for="course">Course</label></td>
+            <td>
+              <select id="course" required>
+                <option value="">Select</option>
+                <option value="PYTHON">PYTHON</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+                <option value="C++">C++</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="email">E-mail</label></td>
+            <td><input type="email" id="email" required></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button type="submit" class="save-btn">Save</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <!-- Data Table -->
+    <table border="1" cellpadding="8" id="studentTable" style="margin-top:20px; width:80%;">
+      <thead>
+        <tr bgcolor="#f2f2f2">
+          <th>NAME</th>
+          <th>AGE</th>
+          <th>COURSE</th>
+          <th>GENDER</th>
+          <th>EMAIL</th>
+          <th>ACTION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ramya</td>
+          <td>22</td>
+          <td>Java</td>
+          <td>Female</td>
+          <td>Ramya@gmail.com</td>
+          <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+          <td>Lavanya</td>
+          <td>23</td>
+          <td>JavaScript</td>
+          <td>Female</td>
+          <td>Lavanya@gmail.com</td>
+          <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Linking JS -->
+  <script src="script.js"></script>
+</body>
+</html>
